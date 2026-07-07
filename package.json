@@ -1,0 +1,47 @@
+{
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.101.0"
+  },
+  "name": "maket",
+  "version": "1.0.0",
+  "main": "gulp.js",
+  "dependencies": {
+    "ansi-colors": "^1.1.0",
+    "ansi-regex": "^5.0.1",
+    "ansi-wrap": "^0.1.0",
+    "arr-diff": "^4.0.0",
+    "arr-union": "^3.1.0",
+    "assign-symbols": "^1.0.0",
+    "bootstrap": "^5.3.8",
+    "chokidar": "^5.0.0",
+    "detect-libc": "^2.1.2",
+    "extend-shallow": "^3.0.2",
+    "immutable": "^5.1.6",
+    "is-extendable": "^1.0.1",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "is-plain-object": "^2.0.4",
+    "isobject": "^3.0.1",
+    "lodash.clonedeep": "^4.5.0",
+    "node-addon-api": "^7.1.1",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.4",
+    "plugin-error": "^1.0.1",
+    "readdirp": "^5.0.0",
+    "replace-ext": "^2.0.0",
+    "source-map": "^0.5.7",
+    "source-map-js": "^1.2.1",
+    "strip-ansi": "^6.0.1",
+    "vinyl-sourcemaps-apply": "^0.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

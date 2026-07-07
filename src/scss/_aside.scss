@@ -1,0 +1,61 @@
+.aside-nav {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    color: #0B0D21; 
+    transition: color 0.3s ease;
+
+    ul {
+        align-items: flex-end; 
+    }
+
+    .aside-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        position: relative;
+        height: 20px;
+        color: inherit;
+
+        .text {
+            font-size: 12px;
+            font-family: sans-serif;
+            white-space: nowrap;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            display: inline-block;
+            max-width: 15px;
+            overflow: hidden;
+        }
+
+        .line {
+            display: inline-block;
+            width: 15px;
+            height: 1px;
+            background-color: currentColor;
+            margin-left: 10px;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+
+        &.active {
+            .text {
+                opacity: 1;
+                max-width: 150px;
+                font-weight: bold;
+            }
+
+            .line {
+                opacity: 1;
+                width: 35px;
+            }
+        }
+    }
+
+    &:has(.aside-link[href="#home"].active),
+    &:has(.aside-link[href="#contact"].active) {
+        color: #ffffff;
+    }
+}

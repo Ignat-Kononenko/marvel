@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../fonts/SofiaProLight-webfont.woff2') format('woff2'),
+        url('../fonts/SofiaProLight-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style:italic;
+}
+
+@font-face {
+    font-family: 'Sofia Pro Bold';
+    src: url('../fonts/sofia-pro-bold.woff2') format('woff2'),
+        url('../fonts/sofia-pro-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Sofia Pro Italic';
+    src: url('../fonts/Sofia-Pro-Light-Italic.woff2') format('woff2'),
+        url('../fonts/Sofia-Pro-Light-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('../fonts/Aeonik-Regular.ttf') format('truetype');
+    font-weight: 400; 
+    font-style: normal;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+$font-alata: 'Alata', sans-serif;
+$font-sofia-pro: 'Sofia Pro', sans-serif;
+$font-sofia-pro-bold: 'Sofia Pro Bold', sans-serif;
+$font-sofia-pro-italic: 'Sofia Pro Italic', sans-serif;
+$font-aeonik: 'Aeonik', sans-serif;
+
+$brand-yellow: #e8c02c;
+$brand-black: #050505;
+$yellow-FACC15: #FACC15;
+$white: #ffffff;
+$black-0B0D21:#0B0D21;
+
+$card-min-height: 680px;
+
+@mixin title-style {
+    font-size: 90px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    font-family: 'Alata', sans-serif;
+}
+
+@mixin title-style-mobile {
+    font-size: 40px;
+    margin-bottom: 32px;
+}
+
+@mixin yellow-divider-title {
+        width: 100px;
+        height: 6px;
+        background-color: $yellow-FACC15;
+}
+
+
+@mixin divider-title-mobile {
+    width: 60px;
+    height: 4px;
+}
+
+@mixin white-divider-title {
+    width: 100px;
+    height: 6px;
+    background-color: $white;
+}
+

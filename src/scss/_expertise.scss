@@ -1,0 +1,231 @@
+@use 'variables' as *;
+
+.expertise-section{
+    background-color: #F9F9F9;
+
+    .text-of-expertise{
+        font-family: $font-sofia-pro;
+        font-size: 18px;
+        width: 97%;
+        margin-top: 16px;
+        margin-bottom: 0px;
+    }
+    .expertise-graphic-container {
+        position: relative;
+        width: 100%;
+        max-width: 480px;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+
+        .graphic-line{
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            border: 16px solid transparent;
+            background: linear-gradient(#F9F9F9, #F9F9F9) padding-box ,
+                        linear-gradient(to top right, $white, #dcdbe1) border-box;
+            border-radius: 50%;
+        }
+        .logo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+        }
+        .graphic-circle{
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            background-color: $white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        .graphic-circle span{
+            font-size: 14px;
+            color: #0B0D21;
+            margin: 0;
+            font-family: 'Sofia Pro', sans-serif;
+        }
+
+        .left-center-circle{
+            top: 40%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .right-center-circle{
+            top: 40%;
+            right: 0%;
+            transform: translateY(-50%);
+        }
+        .top-center-circle{
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .bottom-right-circle{
+            bottom: 0;
+            right: 13%;
+        }
+        .bottom-left-circle{
+            bottom: 0%;
+            left: 13%;
+        }
+    }
+
+    .expertise-intro-bold {
+        font-family: $font-sofia-pro-bold;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: #0B0D21;
+        margin-bottom: 0;
+    }
+
+    .expertise-intro-text {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.6;
+        color: #4a4a4a;
+    }
+
+    .expertise-value-title {
+        font-family: $font-sofia-pro-bold;
+        font-size: 20px;
+        font-weight: 700;
+        color: #0B0D21;
+    }
+
+    .expertise-value-card {
+        background-color: #0B0D21;
+        color: $white;
+        padding: 30px 24px;
+        border-radius: 6px 6px 6px 32px; 
+        display: flex;
+        align-items: flex-start;
+        height: 100%;
+        
+        .value-number {
+            color: $yellow-FACC15;
+            font-family: $font-sofia-pro-bold;
+            font-weight: 700;
+            font-size: 15px;
+            margin-right: 16px;
+            min-width: 20px;
+        }
+
+        .value-text {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 0;
+
+            strong {
+                font-family: $font-sofia-pro-bold;
+                font-weight: 700;
+                color: $white;
+            }
+        }
+    }
+
+    .expertise-divider {
+        border-color: rgba(11, 13, 33, 0.1);
+        border-width: 1px;
+        opacity: 1;
+    }
+
+    .expertise-outro-text {
+        font-size: 22px;
+        line-height: 1.5;
+        font-weight: 300;
+        color: #0B0D21;
+        margin-bottom: 0;
+        
+        strong {
+            font-family: $font-sofia-pro-bold;
+            font-weight: 700;
+        }
+    }
+
+}
+
+@media (max-width: 991px) {
+    .expertise-section {
+
+        .text-of-expertise {
+            font-size: 16px; 
+        }
+
+        .expertise-graphic-container {
+            max-width: 320px;
+            margin-top: 40px;
+            margin-bottom: 32px;
+
+            .graphic-line {
+                border-width: 10px; 
+                width: 70%;
+                height: 70%;
+                top: 15%;
+                left: 15%;
+            }
+
+            .logo {
+                width: 60px; 
+                height: 60px;
+            }
+
+            .graphic-circle {
+                width: 83px; 
+                height: 83px;
+                span {
+                    font-size: 10px; 
+                }
+            }
+            .bottom-right-circle {
+                right: 18%; 
+                bottom: 5%;
+            }
+            .bottom-left-circle {
+                bottom: 5%;
+                left: 18%;
+            }
+
+            .left-center-circle{
+                left: 5%;
+            }
+            .right-center-circle{
+                right: 5%;
+            }
+            .top-center-circle{
+                top: 5%;
+            }
+        }
+
+        .expertise-intro-bold {
+            font-size: 18px;
+        }
+        .expertise-value-card {
+            padding: 24px 20px;
+        }
+        .expertise-outro-text {
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+        
+    }
+}
+
+@media (min-width: 992px){
+    .expertise-section{
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+}

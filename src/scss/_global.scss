@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+.section-title {
+    font-size: 90px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #0B0D21;
+    font-family: $font-alata;
+
+    @media (max-width: 991px) {
+        font-size: 40px;
+    }
+}
+
+.yellow-divider {
+    @include yellow-divider-title;
+
+    @media (max-width: 991px) {
+        @include divider-title-mobile;
+    }
+}
+
+.white-divider {
+    @include white-divider-title;
+
+    @media (max-width: 991px) {
+        @include divider-title-mobile;
+    }
+}
+
+.services-divider {
+    border-color: rgba(11, 13, 33, 0.1);
+    border-width: 1px;
+    opacity: 1;
+}
