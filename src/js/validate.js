@@ -28,16 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-    if (emailInput && emailInput.value.trim() !== '') {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailInput.value.trim())) {
-            emailInput.classList.add('is-invalid');
-                isFormValid = false;
-        } else {
-            emailInput.classList.remove('is-invalid');
-        }
-    }
     if (phoneInput) {
         phoneInput.addEventListener('input', (e) => {
             e.target.value = e.target.value.replace(/\D/g, '');
@@ -64,16 +54,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     input.classList.remove('is-invalid');
                 }
             }
+            
             else {
                 input.classList.remove('is-invalid');
             }
         });
+        
+        if (emailInput && emailInput.value.trim() !== '') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                emailInput.classList.add('is-invalid');
+                    isFormValid = false;
+            } else {
+                emailInput.classList.remove('is-invalid');
+            }
+        }
 
         
         if (!isFormValid) {
             event.preventDefault();
         } else {
-            event.preventDefault();
             alert('Форма успешно заполнена! Тут будет скачивание PDF (уже на сервере)'); 
         }
     });
