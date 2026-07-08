@@ -7,7 +7,7 @@ burgerButton.addEventListener('click', () => {
         document.body.style.overflow = 'hidden';
 });
 
-closeMenu.addEventListener('click', () => {
+closeButton.addEventListener('click', () => {
     mobileMenu.classList.remove('active');
     document.body.style.overflow = '';
 });
