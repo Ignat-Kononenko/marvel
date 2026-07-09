@@ -29,7 +29,10 @@
         width: 100%;
         margin: 150px 0 0 0;
     }
-
+    .back-icon{
+        width: 34px;
+        height: 10px;
+    }
     .main-title {
         font-size: clamp(32px, 5vw, 115px); 
         line-height: 1.1;
@@ -161,7 +164,7 @@
             height: auto;
         }
 
-        .center-logo svg {
+        .center-logo object {
             width: 65px;
             height: auto;
             margin-top: 64px;
@@ -193,12 +196,13 @@
         .scroll-indicator {
             display: none;
         }
-        .marvelsvg {
+        .header-section .marvelsvg {
             width: 98px;
-            height: 35px;
+            height: 37px;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            
         }
         .header-section .main-content-wrapper{
             margin: 0%;
