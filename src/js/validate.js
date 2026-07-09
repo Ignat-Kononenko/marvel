@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 isFormValid = false;
             }
             else if (input.placeholder.includes('NAME')) {
-                const nameRegex = /^[a-zA-Zа-яА-ЯёЁ]+$/;
+                const nameRegex = /^[a-zA-Z]+$/;
                 if (input.value.trim().length <= 2 || !nameRegex.test(input.value.trim())) {
                     input.classList.add('is-invalid');
                     isFormValid = false;
