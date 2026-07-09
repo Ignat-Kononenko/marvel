@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    const menuLinks = document.querySelectorAll('.electricity-first-section .list a[href^="#"], .aside-nav a[href^="#"]');  
+    const menuLinks = document.querySelectorAll('.header-section .list a[href^="#"], .aside-nav a[href^="#"]');  
     
     const sections =[];
 
