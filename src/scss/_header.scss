@@ -1,15 +1,20 @@
 @use 'variables' as *;
 
 .header-section{
+    .head-bg-rng{
+        background-image: url('../photo/rng-header.jpg');
+    }
+    .head-bg-electricity{
+        background-image: url('../photo/city.png');
+    }
     .head{
         position: relative;
         display: flex;
         min-height: 100vh;
 
-        background-image: var(--bg-image, url('../photo/city.png'));
         background-size: cover; 
         background-repeat: no-repeat;
-        background-position: center 100%; 
+        background-position: center 10%; 
         z-index: 1;
 
         &::after {
