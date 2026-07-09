@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             else if (input.placeholder.includes('NAME')) {
                 const nameRegex = /^[a-zA-Zа-яА-ЯёЁ]+$/;
-                if (input.value.trim().length <= 4 || !nameRegex.test(input.value.trim())) {
+                if (input.value.trim().length <= 2 || !nameRegex.test(input.value.trim())) {
                     input.classList.add('is-invalid');
                     isFormValid = false;
                 } else {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isFormValid) {
             event.preventDefault();
         } else {
-            alert('Форма успешно заполнена! Тут будет скачивание PDF (уже на сервере)'); 
+            alert('The form has been successfully filled out! The PDF download will be available here (it is already on the server).'); 
         }
     });
 
