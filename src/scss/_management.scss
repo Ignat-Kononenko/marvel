@@ -129,6 +129,69 @@
             }
         }
     }
+    .management-carousel {
+        padding: 0;
+        position: relative;
+        overflow: visible !important;
+        .carousel-inner {
+            overflow: visible !important; 
+        }
+        .carousel-item {
+            overflow: visible !important;
+        }
+        .carousel-indicators {
+            bottom: -20px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+
+            [data-bs-target] {
+                background-color: #FACC15;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                margin: 0 5px;
+                border: none;
+                opacity: 0.3;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            .active {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            position: absolute;
+            top: auto;
+            bottom: -26px;
+            width: auto;
+            height: auto;
+            z-index: 15;
+        }
+        .carousel-control-prev {
+            left: 50%;
+            transform: translateX(-75px);
+        }
+        .carousel-control-next {
+            right: 50%;
+            transform: translateX(75px);
+        }
+
+        .carousel-control-prev:active { transform: translateX(-77px) scale(0.9); }
+        .carousel-control-next:active { transform: translateX(77px) scale(0.9); }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0,0,0,0.5);
+            width: 24px;
+            height: 24px;
+            background-size: 100% 100%;
+        }
+    }
 }
 
 
@@ -179,5 +242,21 @@
         .yellow-square-list li{
             font-size: 14px;
         }
+        .management-carousel .carousel-control-prev,
+        .management-carousel .carousel-control-next {
+            display: none !important;
+        }
+
+        .management-carousel .carousel-indicators {
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 100%;
+            justify-content: center;
+        }
     }
+    
 }
+
+
