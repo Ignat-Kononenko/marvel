@@ -12,7 +12,7 @@
     
     <header id="home" class="header-section ">
         <div class="head head-bg-electricity d-flex flex-column">
-            <div class="header-section-points d-flex align-items-center justify-content-between px-3 px-md-4 py-3 w-100">
+            <div class="header-section-points d-flex align-items-center justify-content-between px-3 px-md-4 py-3 w-100 mb-5 mb-lg-0">
     
                 <a href="index.html" class="btn btn-custom btn-yellow circle-btn">
                     <span>
@@ -73,7 +73,7 @@
             <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-center text-center px-3">
                 <div class="main-content-wrapper">
                     
-                    <div class="center-logo mb-3">
+                    <div class="center-logo mb-3 mt-4">
                         <object type="image/svg+xml" data="svg/header-section/center-logo.svg" width="140" height="136" style="pointer-events: none; display: block; margin: 0 auto;"></object>
                     </div>
 
@@ -607,33 +607,42 @@
                         To download our latest PowerPlay, please fill out the following intake form
                     </p>
 
-                    <form class="powerplay-form">
+                    <form class="powerplay-form" novalidate>
                         
                         <div class="row g-3 mb-3">
                             <div class="col-12 col-md-6">
                                 <input type="text" class="form-control custom-input" placeholder="FIRST NAME *" required>
                                 <div class="invalid-feedback text-danger small mt-1">
-                                    The name must be longer than two letters and contain only letters.
+                                    The name must be longer than two letters and contain only english letters.
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <input type="text" class="form-control custom-input" placeholder="LAST NAME *" required>
                                 <div class="invalid-feedback text-danger small mt-1">
-                                    The surname must be longer than two letters and contain only letters.
+                                    The surname must be longer than two letters and contain only english letters.
                                 </div>
                             </div>
                         </div>
                         
                         <div class="mb-3">
                             <input type="text" class="form-control custom-input" placeholder="COMPANY NAME *" required>
+                            <div class="invalid-feedback text-danger small mt-1">
+                                    Please fill in this field.
+                            </div>
                         </div>
                         
                         <div class="mb-3">
                             <input type="text" class="form-control custom-input" placeholder="TITLE *" required>
+                            <div class="invalid-feedback text-danger small mt-1">
+                                Please fill in this field.
+                            </div>
                         </div>
                         
                         <div class="mb-3">
                             <input type="email" class="form-control custom-input" placeholder="EMAIL *" required>
+                            <div class="invalid-feedback text-danger small mt-1">
+                                Please fill in this field.
+                            </div>
                         </div>
                         
                         <div class="mb-4 input-group custom-input-group position-relative dropdown">
@@ -667,7 +676,9 @@
                             </ul>
                             
                             <input type="tel" class="form-control custom-input border-0 ps-3 fw-bold text-dark" required style="font-size: 16px; letter-spacing: 0.5px;">
+                            
                         </div>
+                        
 
                         <div class="form-check mb-4 d-flex align-items-center gap-2">
                             <input class="form-check-input custom-checkbox m-0" type="checkbox" id="weeklyList">
