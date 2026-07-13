@@ -3,18 +3,22 @@
 .header-section{
     .head-bg-rng{
         background-image: url('../photo/rng-header.webp');
+        background-position: center 10%;  
     }
     .head-bg-electricity{
-        background-image: url('../photo/city.png');
+        background-image: url('../photo/electricity-head.webp');
+        
+        background-position: center bottom 0%;
+
     }
     .head{
         position: relative;
         display: flex;
         min-height: 100vh;
+        background-size: cover;
 
-        background-size: cover; 
         background-repeat: no-repeat;
-        background-position: center 10%; 
+        
         z-index: 1;
 
         &::after {
