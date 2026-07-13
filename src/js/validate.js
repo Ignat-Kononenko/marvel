@@ -10,11 +10,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentCode = form.querySelector('.current-code');
     const countryItems = form.querySelectorAll('.country-select');
 
+    const setError = (input, message) => {
+        input.classList.add('is-invalid');
+        const feedback = input.nextElementSibling;
+        if (feedback && feedback.classList.contains('invalid-feedback')) {
+            feedback.textContent = message;
+        }
+    };
+
+    const validateSingleInput = (input) => {
+        const value = input.value.trim();
+        const placeholder = input.placeholder || '';
+
+        if (value === '') {
+            setError(input, 'Please fill in this field.');
+            return false;
+        }
+
+        if ((placeholder.includes('FIRST NAME') || placeholder.includes('LAST NAME')) && !placeholder.includes('COMPANY')) {
+            const nameRegex = /^[a-zA-Z]+$/;
+            if (value.length <= 2 || !nameRegex.test(value)) {
+                setError(input, 'The name must be longer than two letters and contain only english letters.');
+                return false;
+            }
+        }
+
+        input.classList.remove('is-invalid');
+        return true;
+    };
+
+    const validateEmail = (input) => {
+        if (!input) return true;
+        const value = input.value.trim();
+
+        if (value === '') {
+            setError(input, 'Please fill in this field.');
+            return false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+            setError(input, 'Please enter a valid email address.');
+            return false;
+        }
+
+        input.classList.remove('is-invalid');
+        return true;
+    };
 
     countryItems.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
-            
             const flagUrl = item.getAttribute('data-flag');
             const code = item.getAttribute('data-code');
 
@@ -41,36 +87,15 @@ document.addEventListener('DOMContentLoaded', () => {
         let isFormValid = true;
 
         requiredInputs.forEach(input => {
-            if (input.value.trim() === '') {
-                input.classList.add('is-invalid');
-                isFormValid = false;
-            }
-            else if (input.placeholder.includes('NAME')) {
-                const nameRegex = /^[a-zA-Z]+$/;
-                if (input.value.trim().length <= 2 || !nameRegex.test(input.value.trim())) {
-                    input.classList.add('is-invalid');
-                    isFormValid = false;
-                } else {
-                    input.classList.remove('is-invalid');
-                }
-            }
-            
-            else {
-                input.classList.remove('is-invalid');
+            if (input.type !== 'email') {
+                if (!validateSingleInput(input)) isFormValid = false;
             }
         });
         
-        if (emailInput && emailInput.value.trim() !== '') {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(emailInput.value.trim())) {
-                emailInput.classList.add('is-invalid');
-                    isFormValid = false;
-            } else {
-                emailInput.classList.remove('is-invalid');
-            }
+        if (emailInput && !validateEmail(emailInput)) {
+            isFormValid = false;
         }
 
-        
         if (!isFormValid) {
             event.preventDefault();
         } else {
@@ -80,8 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.querySelectorAll('.custom-input').forEach(input => {
         input.addEventListener('input', () => {
-            if (input.value.trim() !== '') {
-                input.classList.remove('is-invalid');
+            if (input.type === 'email') {
+                validateEmail(input);
+            } else {
+                validateSingleInput(input);
             }
         });
     });
